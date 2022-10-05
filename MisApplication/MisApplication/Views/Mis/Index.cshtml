@@ -1,0 +1,175 @@
+﻿@model IEnumerable<MisApplication.Models.mis>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="padding-right:80px;">
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.EMO)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Admission)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Discharge)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.NVD)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.SB)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Dialysis)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Physiotherapy)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.EPI)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Dressing)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Nebulizer)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.InjectionPush)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Stich)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.CS)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.DandC)
+            </th>
+            <th style="padding-right:50px;"> 
+                @Html.DisplayNameFor(model => model.Surgery)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.USG)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Xray)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.ECG)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.CTG)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.Lab)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.PFquentity)
+            </th>
+            <th style="padding-right:50px;">
+                @Html.DisplayNameFor(model => model.PFvalue)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Admission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discharge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NVD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dialysis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Physiotherapy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EPI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dressing)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nebulizer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjectionPush)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stich)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DandC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surgery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.USG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Xray)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ECG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CTG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lab)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFquentity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PFvalue)
+            </td>
+            <td>
+                <a asp-action="Edit"class="btn btn-primary" asp-route-id="@item.Id">Edit</a>
+            </td>
+            <td>
+                
+                <a asp-action="Details"class="btn btn-primary" asp-route-id="@item.Id">Details</a> 
+               
+            </td>
+            <td>
+               
+                <a asp-action="Delete"class="btn btn-primary" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

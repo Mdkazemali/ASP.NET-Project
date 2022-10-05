@@ -1,0 +1,161 @@
+﻿@model MisApplication.Models.mis
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>mis</h4>
+    <hr />
+    <dl class="row">
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EMO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EMO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Admission)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Admission)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Discharge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Discharge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NVD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NVD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dialysis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dialysis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Physiotherapy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Physiotherapy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EPI)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EPI)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dressing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dressing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nebulizer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nebulizer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InjectionPush)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InjectionPush)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stich)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stich)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DandC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DandC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Surgery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Surgery)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.USG)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.USG)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Xray)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Xray)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ECG)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ECG)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CTG)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CTG)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lab)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lab)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PFquentity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PFquentity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PFvalue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PFvalue)
+        </dd>
+       
+    </dl>
+</div><br />
+<div>
+    @Model.Sum(i=>i.EMO)
+</div>
+<div>
+    <a asp-action="Edit"class="btn btn-primary" asp-route-id="@Model?.Id">Edit</a> &nbsp;
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>&nbsp;
+    <a href="javascript:window.print()" class="btn btn-primary">Print</a>
+</div>
